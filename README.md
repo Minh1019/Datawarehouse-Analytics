@@ -89,21 +89,21 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 ## 📁 Cấu trúc thư mục dự án
 Datawarehouse-Analytics/
 │
-├── Analytics/ # Notebook Jupyter phân tích dữ liệu
-│ ├── Association rules.ipynb
-│ ├── Customer segmentation.ipynb
-│ └── Revenue Forecast.ipynb
+├── Analytics/                     # Notebook Jupyter phân tích dữ liệu
+│   ├── Association rules.ipynb
+│   ├── Customer segmentation.ipynb
+│   └── Revenue Forecast.ipynb
 │
-├── Assets/ # Ảnh minh họa
+├── Assets/                        # Ảnh minh họa
 │
-├── Data model/ # File tạo mô hình dữ liệu
-│ └── starschema.sql
+├── Data model/                    # File tạo mô hình dữ liệu
+│   └── starschema.sql
 │
-├── Document/ 
-│ ├── Phân quyền truy cập cho BI User trên Power BI Service
-│ ├── Quy trình triển khai kho dữ liệu.docx
+├── Document/                      # Tài liệu kỹ thuật
+│   ├── Phân quyền truy cập cho BI User trên Power BI Service.docx
+│   └── Quy trình triển khai kho dữ liệu.docx
 │
-├── Sample Data/ # Dữ liệu mẫu 
+├── Sample Data/                   # Dữ liệu mẫu
 │
-└── README.md 
+└── README.md
 
