@@ -36,7 +36,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 
 📷 *Hình ảnh mô hình dữ liệu (ERD):*
 
-![Mô hình dữ liệu Star Schema](./assets/starschema.png)
+![Mô hình dữ liệu Star Schema](./Assets/Starschema.png)
 
 ---
 
@@ -89,21 +89,21 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 ## 📁 Cấu trúc thư mục dự án
 Datawarehouse-Analytics/
 │
-├── Analytics/
-│   ├── Association rules.ipynb
-│   ├── Customer segmentation.ipynb
-│   └── Revenue Forecast.ipynb
+├── Analytics/ # Notebook Jupyter phân tích dữ liệu
+│ ├── Association rules.ipynb
+│ ├── Customer segmentation.ipynb
+│ └── Revenue Forecast.ipynb
 │
-├── Assets/    
+├── Assets/ # Ảnh minh họa
 │
-├── Data model/
-│   └── starschema.sql
+├── Data model/ # File tạo mô hình dữ liệu
+│ └── starschema.sql
 │
-├── Document/
-│   ├── Cấu hình ETL job.png
-│   ├── Cấu hình Schedule cho các job ETL.png
+├── Document/ 
+│ ├── Phân quyền truy cập cho BI User trên Power BI Service
+│ ├── Quy trình triển khai kho dữ liệu.docx
 │
-├── Sample Data/
+├── Sample Data/ # Dữ liệu mẫu 
 │
-└── README.md
+└── README.md 
 
