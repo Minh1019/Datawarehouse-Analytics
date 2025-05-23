@@ -87,7 +87,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 
 
 ## 📁 Cấu trúc thư mục dự án
-'''
+```
 Datawarehouse-Analytics/
 │
 ├── Analytics/                     # Notebook Jupyter phân tích dữ liệu
@@ -107,5 +107,5 @@ Datawarehouse-Analytics/
 ├── Sample Data/                   # Dữ liệu mẫu
 │
 └── README.md
-'''
+```
 
