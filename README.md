@@ -8,23 +8,16 @@ Dự án này hướng đến việc thiết kế và triển khai **kho dữ li
 
 1. Phân tích và đánh giá hiện trạng hệ thống lưu trữ và khai thác dữ liệu của doanh nghiệp
 2. Thiết kế và triển khai **kho dữ liệu trên nền tảng AWS** (S3, Glue, Redshift)
-3. Ứng dụng các kỹ thuật khai phá dữ liệu như **Apriori, FP-Growth, RFM, K-means**
-4. Trực quan hóa dữ liệu với **Power BI** và dự báo doanh thu bằng mô hình **Prophet**
+3. Ứng dụng các kỹ thuật khai phá dữ liệu như **Apriori, FP-Growth, RFM, K-means** để phân tích hành vi khách hàng từ đó đề xuất được chiến lược kinh doanh hiệu quả   
+4. Trực quan hóa dữ liệu với **Power BI** và dự báo doanh thu bằng mô hình **Prophet** để cung cấp thông tin một cách trực quan và hỗ trợ lập kế hoạch kinh doanh trong tương lai
 
 ---
 
-## 📌 Đối tượng và phạm vi nghiên cứu
 
-- **Đối tượng nghiên cứu**: Hệ thống kho dữ liệu sử dụng dịch vụ AWS (S3, Glue, Redshift), các thuật toán phân tích dữ liệu, công cụ Power BI
-- **Phạm vi nghiên cứu**: Hoạt động dữ liệu tại Công ty TSG trong giai đoạn **01/2022 – 12/2024**
-
----
-
-## 🔬 Phương pháp nghiên cứu
+## 🔬 Các bước thực hiện
 
 ### 1. Khảo sát hệ thống hiện tại
 Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ và hạn chế của hệ thống cũ  
-📷 *(Chèn ảnh sơ đồ hệ thống cũ nếu có)*
 
 ---
 
@@ -41,20 +34,25 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 ---
 
 ### 3. Triển khai pipeline ETL trên AWS
+📷 *Ảnh quy trình thực hiện*
+
+![Quy trình thực hiện](./assets/Quy trình.png)
 
 - **Amazon S3**: lưu trữ dữ liệu gốc
 - **AWS Glue**: xử lý, làm sạch và chuyển đổi dữ liệu
-- **Amazon Redshift**: lưu trữ dữ liệu đã xử lý phục vụ Power BI
+- **Amazon Redshift**: lưu trữ dữ liệu đã xử lý phục vụ khai thác dữ liệu
 
 📷 *Ảnh cấu hình lịch chạy ETL định kỳ từ Glue → Redshift:*
 
-![Lịch ETL](./assets/etl-schedule.png)
+![Lịch ETL](./assets/Cấu hình ETL job.png)
 
 ---
 
 ### 4. Thiết kế báo cáo BI trên Power BI
 
 - Báo cáo tổng quan doanh thu
+
+![Lịch ETL](./assets/Cấu hình ETL job.png)
 - Phân tích theo **chi nhánh**, **sản phẩm**, **khách hàng**, **nhân viên**
 - Cập nhật tự động từ Redshift theo lịch định kỳ
 
