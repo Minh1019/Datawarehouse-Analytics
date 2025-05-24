@@ -36,7 +36,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 ### 3. Triển khai pipeline ETL trên AWS
 📷 *Ảnh quy trình thực hiện*
 
-![Quy trình thực hiện](./assets/Quy trình.png)
+![Quy trình thực hiện](./assets/Quy%20trình.png)
 
 - **Amazon S3**: lưu trữ dữ liệu gốc
 - **AWS Glue**: xử lý, làm sạch và chuyển đổi dữ liệu
@@ -44,7 +44,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 
 📷 *Ảnh cấu hình lịch chạy ETL định kỳ từ Glue → Redshift:*
 
-![Lịch ETL](./assets/Cấu hình ETL job.png)
+![Lịch ETL](./assets/Cấu%20hình%20ETL%20job.png)
 
 ---
 
@@ -52,12 +52,9 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 
 - Báo cáo tổng quan doanh thu
 
-![Lịch ETL](./assets/Cấu hình ETL job.png)
+![Dashboard Overview](./assets/Dashboard%20Overview.png)
 - Phân tích theo **chi nhánh**, **sản phẩm**, **khách hàng**, **nhân viên**
-- Cập nhật tự động từ Redshift theo lịch định kỳ
-
-📷 *Chèn ảnh một số dashboard BI (Power BI)*
-
+![Dashboard Overview](./assets/Dashboard%20ph%C3%A2n%20th%C3%ADch%20theo%20chi%E1%BB%81u%20kh%C3%A1ch%20h%C3%A0ng.png)
 ---
 
 ### 5. Dự báo doanh thu bằng Prophet
