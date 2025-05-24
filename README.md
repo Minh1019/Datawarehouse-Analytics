@@ -44,7 +44,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 
 📷 *Ảnh cấu hình lịch chạy ETL định kỳ từ Glue → Redshift:*
 
-![Lịch ETL](./Assets/Cấu%20hình%20ETL%20job.png)
+![Lịch ETL](./Assets/Cấu%20hình%20Schedule%20cho%20các%20job%20ETL.png)
 
 ---
 
@@ -56,7 +56,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 
 | Theo khách hàng | Theo chi nhánh |
 |------------------|----------------|
-| ![Khách hàng](./Assets/Dashboard%20phân%20tích%20theo%20chiều%20khách%20hàng.png) | ![Chi nhánh](./Assets/Dashboard%20phân%20tích%20theo%20chiều%20chi%20nhánh.png) |
+| ![Khách hàng](./Assets/Dashboard%20phân%20thích%20theo%20chiều%20khách%20hàng.png) | ![Chi nhánh](./Assets/Dashboard%20phân%20tích%20theo%20chiều%20chi%20nhánh.png) |
 
 | Theo nhân viên | Theo sản phẩm |
 |----------------|----------------|
@@ -73,7 +73,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
   ![Doanh thu phụ kiện](./Assets/Dự%20báo%20doanh%20thu%20cho%20nhóm%20sản%20phẩm%20phụ%20kiện.png)
 
 - Nhóm sản phẩm **phần mềm**  
-  ![Doanh thu phần mềm](./Assets/Dự%20báo%20doanh%20thu%20cho%20nhóm%20sản%20phẩm%20phần%20mềm.png)
+  ![Doanh thu phần mềm](./Assets/Dự%20báo%20doanh%20thu%20theo%20nhóm%20sản%20phẩm%20phần%20mềm.png)
 
 ---
 
