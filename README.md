@@ -36,7 +36,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 ### 3. Triển khai pipeline ETL trên AWS
 📷 *Ảnh quy trình thực hiện*
 
-![Quy trình thực hiện](./assets/Quy%20trình.png)
+![Quy trình thực hiện](./Assets/Quy%20trình.png)
 
 - **Amazon S3**: lưu trữ dữ liệu gốc
 - **AWS Glue**: xử lý, làm sạch và chuyển đổi dữ liệu
@@ -44,7 +44,7 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 
 📷 *Ảnh cấu hình lịch chạy ETL định kỳ từ Glue → Redshift:*
 
-![Lịch ETL](./assets/Cấu%20hình%20ETL%20job.png)
+![Lịch ETL](./Assets/Cấu%20hình%20ETL%20job.png)
 
 ---
 
@@ -52,34 +52,51 @@ Phân tích dữ liệu đầu vào, luồng xử lý, cấu trúc lưu trữ v�
 
 - Báo cáo tổng quan doanh thu
 
-![Dashboard Overview](./assets/Dashboard%20Overview.png)
-- Phân tích theo **chi nhánh**, **sản phẩm**, **khách hàng**, **nhân viên**
-![Dashboard Overview](./assets/Dashboard%20ph%C3%A2n%20th%C3%ADch%20theo%20chi%E1%BB%81u%20kh%C3%A1ch%20h%C3%A0ng.png)
----
+![Dashboard Overview](./Assets/Dashboard%20Overview.png)
 
-### 5. Dự báo doanh thu bằng Prophet
+| Theo khách hàng | Theo chi nhánh |
+|------------------|----------------|
+| ![Khách hàng](./Assets/Dashboard%20phân%20tích%20theo%20chiều%20khách%20hàng.png) | ![Chi nhánh](./Assets/Dashboard%20phân%20tích%20theo%20chiều%20chi%20nhánh.png) |
 
-- Dự báo doanh thu theo **từng nhóm sản phẩm**
-- Dữ liệu được xử lý từ Redshift, mô hình Prophet triển khai bằng Python
-
-📷 *Ảnh đồ thị dự báo doanh thu nhóm sản phẩm*
+| Theo nhân viên | Theo sản phẩm |
+|----------------|----------------|
+| ![Nhân viên](./Assets/Dashboard%20phân%20tích%20theo%20chiều%20nhân%20viên.png) | ![Sản phẩm](./Assets/Dashboard%20phân%20tích%20theo%20chiều%20sản%20phẩm.png) |
 
 ---
 
-### 6. Phân tích hành vi khách hàng (luật kết hợp)
+### 5. 📈 Dự báo doanh thu theo nhóm sản phẩm bằng mô hình Prophet
 
-- Sử dụng **FP-Growth và Apriori**
-- Phát hiện các bộ sản phẩm thường được mua cùng
+- Nhóm sản phẩm **máy tính**  
+  ![Doanh thu máy tính](./Assets/Dự%20báo%20doanh%20thu%20cho%20nhóm%20sản%20phẩm%20máy%20tính.png)
 
-📷 *Chèn ảnh biểu đồ luật kết hợp, hoặc bảng luật hỗ trợ quyết định bán chéo*
+- Nhóm sản phẩm **phụ kiện**  
+  ![Doanh thu phụ kiện](./Assets/Dự%20báo%20doanh%20thu%20cho%20nhóm%20sản%20phẩm%20phụ%20kiện.png)
+
+- Nhóm sản phẩm **phần mềm**  
+  ![Doanh thu phần mềm](./Assets/Dự%20báo%20doanh%20thu%20cho%20nhóm%20sản%20phẩm%20phần%20mềm.png)
 
 ---
 
-### 7. Phân khúc khách hàng bằng RFM + K-means
+### 6. Khai phá luật kết hợp để tìm hiểu hành vi mua sắm của khách hàng
+- Phân tích khám phá dữ liệu (EDA) để hiểu dữ liệu, khám phá mẫu, xu hướng
+- Tiền xử lý dữ liệu để đưa vào mô hình 
+- Áp dụng mô hình **FP-Growth và Apriori**
+- So sánh hiệu suất của 2 thuật toán trên bộ dữ liệu và đưa ra nhận xét
+- Phát hiện các bộ sản phẩm thường được mua cùng và đề xuất chiến lược kinh doanh: bán chéo, bán theo combo, marketing theo cụm sản phẩm, triển khai các dịch vụ trọn gói 
+(Các bước được thể hiện chi tiết trong notebook)
 
-- Dựa vào độ mới (Recency), tần suất (Frequency), giá trị (Monetary)
-- Kết quả chia thành 4 nhóm: trung thành, tiềm năng, mới, ít tương tác
+---
 
+### 7. Phân khúc khách hàng bằng mô hình RFM kết hợp với thuận toán phân cụm K-means
+- Phân tích khám phá dữ liệu (EDA) để hiểu dữ liệu, khám phá mẫu, xu hướng
+- Tính toán các chỉ số của mô hình FRM: khoảng thời gian mua hàng gần đây (Recency), tần suất (Frequency), giá trị tiêu dùng (Monetary)
+- Tiền xử lý dữ liệu để đưa vào mô hình
+- Áp dụng thuật toán K-Means để tìm số cụm tối ưu
+- Đánh giá kết quả phân cụm
+- Nhận xét về đặc điểm của các cụm
+- Kết quả sau khi phân cụm khách hàng được chia thành 4 nhóm: trung thành, tiềm năng, mới, ít tương tác
+- Đề xuất chiến lược tiếp thị đối với từng nhóm khách hàng 
+(Các bước được thể hiện chi tiết trong notebook)
 
 ## 📁 Cấu trúc thư mục dự án
 ```
